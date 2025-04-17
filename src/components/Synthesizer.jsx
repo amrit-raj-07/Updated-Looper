@@ -34,6 +34,7 @@ const Synthesizer = () => {
     if (audioSourceUrl && audioRef.current) {
       audioRef.current.play();
       setIsPlaying(true);
+      
     }
   };
 
@@ -76,12 +77,20 @@ const Synthesizer = () => {
       {/* Audio Player with Progress Bar */}
       {(audioFileUrl || recordedAudioUrl) && (
         <div>
-          <audio 
+          {/* <audio 
             ref={audioRef} 
             src={recordedAudioUrl || audioFileUrl} 
             onTimeUpdate={handleTimeUpdate}
             onLoadedMetadata={handleLoadedMetadata}
-          />
+          /> */}
+          <audio 
+  ref={audioRef} 
+  src={recordedAudioUrl || audioFileUrl} 
+  onTimeUpdate={handleTimeUpdate}
+  onLoadedMetadata={handleLoadedMetadata}
+  loop
+/>
+
           <progress value={progress} max="100"></progress>
           {duration > 0 && (
             <p>{Math.floor((progress / 100) * duration)} / {Math.floor(duration)} sec</p>

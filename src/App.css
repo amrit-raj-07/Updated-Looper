@@ -1,13 +1,13 @@
 .App {
   text-align: center;
-  background: linear-gradient(to right, #ec3608, #dc6d18),
-              radial-gradient(circle, #8e2de2, #4a00e0);
+  /* background: linear-gradient(to right, #ec3608, #dc6d18), */
+              /* radial-gradient(circle, #8e2de2, #4a00e0); */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 } .Amrit {box-shadow: 30px 40px 30px 4px black;
-background-color: orangered;
+/* background-color: orangered; */
 margin: 4rem;
 } .btn{
   border-radius: 10rem;background-color: red
@@ -77,6 +77,11 @@ input[type="file"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+body {
+  background: radial-gradient(circle at bottom right, grey, white);
+}
+
 
 input[type="file"]:hover {
   background-color: #e0f0ff;
